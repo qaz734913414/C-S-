@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
+using Newtonsoft.Json.Linq;
 
 namespace CommonLibrary
 {
@@ -32,11 +33,20 @@ namespace CommonLibrary
          FROM[dbo].[Project]
          WHERE[ProjectState]=1";
 
+        public static List<Project> GetFromDatabase()
+        {
+            return BasicFramework.SoftSqlOperate.ExecuteSelectEnumerable<Project>(SqlServerSupport.SqlConnectStr, SqlSelect);
+        }
+
 
         /// <summary>
         /// 数据库标识的序号
         /// </summary>
         public int SequenceNumber { get; set; } = 0;
+        /// <summary>
+        /// 项目的状态，指示项目是否执行中，已完成，或是已经删除了
+        /// </summary>
+        public int ProjectState { get; set; } = 0;
         /// <summary>
         /// 项目编号
         /// </summary>
@@ -90,37 +100,80 @@ namespace CommonLibrary
         /// </summary>
         public int Progress { get; set; } = 0;
 
-
-
-        public List<ProjectDetail> ProjectDetails { get; set; } = new List<ProjectDetail>();
-
+        
         /// <summary>
         /// 项目组的所有成员
         /// </summary>
         public ProjectMember Members { get; set; } = new ProjectMember();
 
 
-        public void GetDetails()
+        public List<ProjectDetail> GetDetails()
         {
             //获取细节
+            return ProjectDetail.GetListFromDatabase(SequenceNumber);
         }
         public void UpdateCurrentNode(string node)
         {
             //更新节点
 
         }
-
-
-        public void GetMembers()
+        public int InsertSqlDatabase()
         {
-            
+            if (SequenceNumber > 0) throw new Exception("该项目已存在，无法新建项目");
+
+            string cmdStr = $@"INSERT INTO [dbo].[Project]
+           ([ProjectState]
+           ,[ProjectId]
+           ,[ProjectCategory]
+           ,[ProjectDepartment]
+           ,[ProjectPriority]
+           ,[PorjectName]
+           ,[Leader]
+           ,[DateCreate]
+           ,[DateStart]
+           ,[DatePlanFinish]
+           ,[DateFinish]
+           ,[DateUpdate]
+           ,[CurrentNode]
+           ,[Progress]
+           ,[Members]) VALUES
+           ({ProjectState}
+           ,'{ProjectId.Replace('\'','-')}'
+           ,{ProjectCategory}
+           ,'{ProjectDepartment}'
+           ,{ProjectPriority}
+           ,'{PorjectName.Replace('\'', '-')}'
+           ,'{Leader}'
+           ,'{DateCreate}'
+           ,<DateStart, datetime,>
+           ,<DatePlanFinish, datetime,>
+           ,<DateFinish, datetime,>
+           ,<DateUpdate, datetime,>
+           ,<CurrentNode, nchar(200),>
+           ,<Progress, int,>
+           ,<Members, nvarchar(500),>)";
         }
 
-
+        
 
         public void LoadBySqlDataReader(SqlDataReader sdr)
         {
-            throw new NotImplementedException();
+            SequenceNumber = Convert.ToInt32(sdr[nameof(SequenceNumber)]);
+            ProjectState = Convert.ToInt32(sdr[nameof(ProjectState)]);
+            ProjectId = sdr[nameof(ProjectId)].ToString();
+            ProjectCategory = Convert.ToInt32(sdr[nameof(ProjectCategory)]);
+            ProjectDepartment = sdr[nameof(ProjectDepartment)].ToString();
+            ProjectPriority = Convert.ToInt32(sdr[nameof(ProjectPriority)]);
+            PorjectName = sdr[nameof(PorjectName)].ToString();
+            Leader = sdr[nameof(Leader)].ToString();
+            DateCreate = Convert.ToDateTime(sdr[nameof(DateCreate)]);
+            DateStart = Convert.ToDateTime(sdr[nameof(DateStart)]);
+            DatePlanFinish = Convert.ToDateTime(sdr[nameof(DatePlanFinish)]);
+            DateFinish = Convert.ToDateTime(sdr[nameof(DateFinish)]);
+            DateUpdate = Convert.ToDateTime(sdr[nameof(DateUpdate)]);
+            CurrentNode = sdr[nameof(CurrentNode)].ToString();
+            Progress = Convert.ToInt32(sdr[nameof(Progress)]);
+            Members = JArray.Parse(sdr[nameof(Members)].ToString()).ToObject<ProjectMember>();
         }
     }
 
@@ -139,6 +192,13 @@ namespace CommonLibrary
       ,[CommentContent]
         FROM[dbo].[ProjectDetail] WHERE[ProjectNumber]=" + projectNumber;
         }
+
+        public static List<ProjectDetail> GetListFromDatabase(int projectNumber)
+        {
+            return BasicFramework.SoftSqlOperate.ExecuteSelectEnumerable<ProjectDetail>(
+                SqlServerSupport.SqlConnectStr, GetSqlSelected(projectNumber));
+        }
+
         /// <summary>
         /// 项目的编号
         /// </summary>
@@ -162,7 +222,11 @@ namespace CommonLibrary
 
         public void LoadBySqlDataReader(SqlDataReader sdr)
         {
-            throw new NotImplementedException();
+            ProjectNumber = Convert.ToInt32(sdr[nameof(ProjectNumber)]);
+            CommentState = Convert.ToInt32(sdr[nameof(CommentState)]);
+            CommentName = sdr[nameof(CommentName)].ToString();
+            CommentTime = Convert.ToDateTime(nameof(CommentTime));
+            CommentContent = sdr[nameof(CommentContent)].ToString();
         }
 
         public int InsertSql()
