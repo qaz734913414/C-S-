@@ -1,0 +1,82 @@
+﻿#################################################################################
+#
+#    本部分用来生成SQL SERVER 2014的数据库的代码
+#    本部分的代码运行即可生成数据库和表
+#    本分支系统将依赖该数据库运行
+#    本模版使用的评估版数据库，若您要使用到正式环境，请支持正版数据库
+#
+#################################################################################
+
+
+CREATE DATEBASE SQL106
+
+
+#################################################################################
+#
+#    上述指示了数据库名称，下面的代码指示了创建表
+#
+#################################################################################
+
+USE [SQL106]
+GO
+
+/****** Object:  Table [dbo].[Project]    Script Date: 2017/4/3 16:56:52 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Project](
+	[SequenceNumber] [int] IDENTITY(1,1) NOT NULL,
+	[ProjectState] [int] NOT NULL,
+	[ProjectId] [nvarchar](30) NULL,
+	[ProjectCategory] [int] NOT NULL,
+	[ProjectDepartment] [nvarchar](10) NULL,
+	[ProjectPriority] [int] NOT NULL,
+	[PorjectName] [nvarchar](80) NOT NULL,
+	[Leader] [nvarchar](20) NOT NULL,
+	[DateCreate] [datetime] NOT NULL,
+	[DateStart] [datetime] NOT NULL,
+	[DatePlanFinish] [datetime] NOT NULL,
+	[DateFinish] [datetime] NOT NULL,
+	[DateUpdate] [datetime] NOT NULL,
+	[CurrentNode] [nchar](200) NOT NULL,
+	[Progress] [int] NOT NULL,
+	[Members] [nvarchar](500) NOT NULL,
+ CONSTRAINT [PK_Project] PRIMARY KEY CLUSTERED 
+(
+	[SequenceNumber] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+#############################################################################################################
+USE [SQL106]
+GO
+
+/****** Object:  Table [dbo].[ProjectDetail]    Script Date: 2017/4/3 17:08:26 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[ProjectDetail](
+	[SequenceNumber] [int] IDENTITY(1,1) NOT NULL,
+	[ProjectNumber] [int] NOT NULL,
+	[CommentState] [int] NOT NULL,
+	[CommentName] [nvarchar](10) NOT NULL,
+	[CommentTime] [datetime] NOT NULL,
+	[CommentContent] [nvarchar](200) NOT NULL,
+ CONSTRAINT [PK_ProjectDetail] PRIMARY KEY CLUSTERED 
+(
+	[SequenceNumber] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+
+###########################################################################################################

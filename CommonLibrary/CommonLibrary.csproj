@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BasicFramework">
+      <HintPath>..\Public\BasicFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,9 +43,13 @@
   <ItemGroup>
     <Compile Include="Common.cs" />
     <Compile Include="HeadCode.cs" />
-    <Compile Include="ProjectSupport\ProjectSupport.cs" />
+    <Compile Include="ProjectSupport\Project.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resource.cs" />
+    <Compile Include="SqlServerSupport.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlCreate.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
