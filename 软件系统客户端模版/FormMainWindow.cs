@@ -79,6 +79,11 @@ namespace 软件系统客户端模版
 
             //初始化窗口
             MainRenderInitialization();
+
+            panel3.Paint += delegate (object sender1, PaintEventArgs e1)
+              {
+                  e1.Graphics.DrawLine(Pens.Gray, 0, 220, 146, 220);
+              };
         }
         private void FormMainWindow_Shown(object sender, EventArgs e)
         {
