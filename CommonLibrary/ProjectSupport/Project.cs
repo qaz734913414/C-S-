@@ -13,8 +13,7 @@ namespace CommonLibrary
     /// </summary>
     public class Project : BasicFramework.ISqlDataType
     {
-        public static string SqlSelect { get; } = @"USE [SQL106]
-           SELECT[SequenceNumber]
+        public static string SqlSelect { get; } = @"SELECT[SequenceNumber]
           ,[ProjectState]
           ,[ProjectId]
           ,[ProjectCategory]
@@ -30,12 +29,26 @@ namespace CommonLibrary
           ,[CurrentNode]
           ,[Progress]
           ,[Members]
-         FROM[dbo].[Project]
-         WHERE[ProjectState]=1";
+         FROM[dbo].[Project]";
 
+        /// <summary>
+        /// 获取所有执行中的项目
+        /// </summary>
+        /// <returns></returns>
         public static List<Project> GetFromDatabase()
         {
-            return BasicFramework.SoftSqlOperate.ExecuteSelectEnumerable<Project>(SqlServerSupport.SqlConnectStr, SqlSelect);
+            return BasicFramework.SoftSqlOperate.ExecuteSelectEnumerable<Project>(SqlServerSupport.SqlConnectStr, SqlSelect + "WHERE[ProjectState] = 1");
+        }
+
+        /// <summary>
+        /// 获取指定时间内完成的项目
+        /// </summary>
+        /// <param name="time"></param>
+        /// <returns></returns>
+        public static List<Project> GetDaysFinishFromDatabase(DateTime time)
+        {
+            return BasicFramework.SoftSqlOperate.ExecuteSelectEnumerable<Project>(SqlServerSupport.SqlConnectStr, SqlSelect +
+                "WHERE[ProjectState] = 2 AND DateFinish > '" + time + "'");
         }
 
 
@@ -44,7 +57,7 @@ namespace CommonLibrary
         /// </summary>
         public int SequenceNumber { get; set; } = 0;
         /// <summary>
-        /// 项目的状态，指示项目是否执行中，已完成，或是已经删除了
+        /// 项目的状态，0:已经删除,1:执行中,2:已完成
         /// </summary>
         public int ProjectState { get; set; } = 0;
         /// <summary>
@@ -112,11 +125,37 @@ namespace CommonLibrary
             //获取细节
             return ProjectDetail.GetListFromDatabase(SequenceNumber);
         }
-        public void UpdateCurrentNode(string node)
+        /// <summary>
+        /// 用于
+        /// </summary>
+        /// <param name="node"></param>
+        /// <returns></returns>
+        public int UpdateCurrentNode(string node)
         {
+            if (SequenceNumber < 1) throw new Exception("项目不存在，无法更新");
             //更新节点
-
+            using (SqlConnection conn = new SqlConnection(SqlServerSupport.SqlConnectStr))
+            {
+                conn.Open();
+                //项目负责人更新
+                string cmdStr = $"UPDATE DBO.Project SET CurrentNode='{node.Replace('\'', '-')}',DateUpdate=GETDATE() " +
+                "WHERE SequenceNumber=" + SequenceNumber;
+                if (BasicFramework.SoftSqlOperate.ExecuteSql(conn, cmdStr) == 1)
+                {
+                    cmdStr = $"INSERT INTO DBO.ProjectDetail VALUES({SequenceNumber},{CommentState.ProjectLeader},'{Leader}',GETDATE(),'{node.Replace('\'', '-')}')";
+                    BasicFramework.SoftSqlOperate.ExecuteSql(conn, cmdStr);
+                    return 1;
+                }
+                else
+                {
+                    return 0;
+                }
+            }
         }
+        /// <summary>
+        /// 将数据插入数据库中
+        /// </summary>
+        /// <returns></returns>
         public int InsertSqlDatabase()
         {
             if (SequenceNumber > 0) throw new Exception("该项目已存在，无法新建项目");
@@ -144,14 +183,15 @@ namespace CommonLibrary
            ,{ProjectPriority}
            ,'{PorjectName.Replace('\'', '-')}'
            ,'{Leader}'
-           ,'{DateCreate}'
-           ,<DateStart, datetime,>
-           ,<DatePlanFinish, datetime,>
-           ,<DateFinish, datetime,>
-           ,<DateUpdate, datetime,>
-           ,<CurrentNode, nchar(200),>
-           ,<Progress, int,>
-           ,<Members, nvarchar(500),>)";
+           ,GETDATE()
+           ,'{DateStart}'
+           ,'{DatePlanFinish}'
+           ,'{DateFinish}'
+           ,'{DateUpdate}'
+           ,'{CurrentNode.Replace('\'', '-')}'
+           ,'{Progress}'
+           ,'{JArray.FromObject(Members).ToString()}')";
+            return BasicFramework.SoftSqlOperate.ExecuteSql(SqlServerSupport.SqlConnectStr, cmdStr);
         }
 
         
@@ -171,7 +211,7 @@ namespace CommonLibrary
             DatePlanFinish = Convert.ToDateTime(sdr[nameof(DatePlanFinish)]);
             DateFinish = Convert.ToDateTime(sdr[nameof(DateFinish)]);
             DateUpdate = Convert.ToDateTime(sdr[nameof(DateUpdate)]);
-            CurrentNode = sdr[nameof(CurrentNode)].ToString();
+            CurrentNode = sdr[nameof(CurrentNode)].ToString().Trim();
             Progress = Convert.ToInt32(sdr[nameof(Progress)]);
             Members = JArray.Parse(sdr[nameof(Members)].ToString()).ToObject<ProjectMember>();
         }
@@ -183,8 +223,7 @@ namespace CommonLibrary
     {
         public static string GetSqlSelected(int projectNumber)
         {
-            return @"USE [SQL106]
-        SELECT[SequenceNumber]
+            return @"SELECT[SequenceNumber]
       ,[ProjectNumber]
       ,[CommentState]
       ,[CommentName]
@@ -193,12 +232,22 @@ namespace CommonLibrary
         FROM[dbo].[ProjectDetail] WHERE[ProjectNumber]=" + projectNumber;
         }
 
+        /// <summary>
+        /// 获取指定项目的所有更新细节
+        /// </summary>
+        /// <param name="projectNumber">唯一的项目编号</param>
+        /// <returns></returns>
         public static List<ProjectDetail> GetListFromDatabase(int projectNumber)
         {
             return BasicFramework.SoftSqlOperate.ExecuteSelectEnumerable<ProjectDetail>(
                 SqlServerSupport.SqlConnectStr, GetSqlSelected(projectNumber));
         }
 
+
+        /// <summary>
+        /// 数据库标识的序号
+        /// </summary>
+        public int SequenceNumber { get; set; } = 0;
         /// <summary>
         /// 项目的编号
         /// </summary>
@@ -220,19 +269,26 @@ namespace CommonLibrary
         /// </summary>
         public string CommentContent { get; set; } = string.Empty;
 
+        /// <summary>
+        /// 从数据库中加载数据
+        /// </summary>
+        /// <param name="sdr"></param>
         public void LoadBySqlDataReader(SqlDataReader sdr)
         {
+            SequenceNumber = Convert.ToInt32(sdr[nameof(SequenceNumber)]);
             ProjectNumber = Convert.ToInt32(sdr[nameof(ProjectNumber)]);
             CommentState = Convert.ToInt32(sdr[nameof(CommentState)]);
             CommentName = sdr[nameof(CommentName)].ToString();
             CommentTime = Convert.ToDateTime(nameof(CommentTime));
             CommentContent = sdr[nameof(CommentContent)].ToString();
         }
-
+        /// <summary>
+        /// 将记录插入到数据库中
+        /// </summary>
+        /// <returns></returns>
         public int InsertSql()
         {
-            string cmdStr = @"USE [SQL106]
-    INSERT INTO[dbo].[ProjectDetail]
+            string cmdStr = @"INSERT INTO[dbo].[ProjectDetail]
            ([ProjectNumber]
            ,[CommentState]
            ,[CommentName]
@@ -240,6 +296,16 @@ namespace CommonLibrary
            ,[CommentContent])
      VALUES
            (" + ProjectNumber + "," + CommentState + ",'" + CommentName + "',GETDATE(),'" + CommentContent.Replace('\'', ',') + "')";
+            return BasicFramework.SoftSqlOperate.ExecuteSql(SqlServerSupport.SqlConnectStr, cmdStr);
+        }
+        /// <summary>
+        /// 删除记录
+        /// </summary>
+        /// <returns></returns>
+        public int DeleteSql()
+        {
+            if (SequenceNumber < 1) throw new Exception("找不到该数据");
+            string cmdStr = "DELETE DBO.ProjectDetail WHERE SequenceNumber=" + SequenceNumber;
             return BasicFramework.SoftSqlOperate.ExecuteSql(SqlServerSupport.SqlConnectStr, cmdStr);
         }
 
