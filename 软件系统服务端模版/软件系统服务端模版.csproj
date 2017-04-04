@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>软件系统服务端模版</RootNamespace>
-    <AssemblyName>软件系统服务端模版</AssemblyName>
+    <AssemblyName>项目管理系统服务器</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

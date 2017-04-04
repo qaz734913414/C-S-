@@ -36,5 +36,23 @@ namespace CommonLibrary
     }
 
 
-    
+    public class UserAccountEx : BasicFramework.UserAccount
+    {
+        /// <summary>
+        /// 所在科室
+        /// </summary>
+        public string Belong { get; set; } = string.Empty;
+        /// <summary>
+        /// 职位
+        /// </summary>
+        public string Job { get; set; } = string.Empty;
+        /// <summary>
+        /// 手机短号
+        /// </summary>
+        public string PhoneShort { get; set; } = string.Empty;
+        /// <summary>
+        /// 手机长号
+        /// </summary>
+        public string Phone { get; set; } = string.Empty;
+    }
 }

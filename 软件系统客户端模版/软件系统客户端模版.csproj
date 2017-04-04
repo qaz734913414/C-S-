@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>软件系统客户端模版</RootNamespace>
-    <AssemblyName>软件系统客户端模版</AssemblyName>
+    <AssemblyName>项目管理系统</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -96,6 +96,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UIControls\CreateNewProject.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControls\CreateNewProject.Designer.cs">
+      <DependentUpon>CreateNewProject.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserClient.cs" />
     <EmbeddedResource Include="FormDownloading.resx">
       <DependentUpon>FormDownloading.cs</DependentUpon>
@@ -124,6 +130,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UIControls\CreateNewProject.resx">
+      <DependentUpon>CreateNewProject.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -136,7 +145,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="UIControls\" />
     <Folder Include="UserControls\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
