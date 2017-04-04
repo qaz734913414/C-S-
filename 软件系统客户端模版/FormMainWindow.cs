@@ -329,9 +329,6 @@ namespace 软件系统客户端模版
 
 
         #endregion
-<<<<<<< HEAD
-        
-=======
 
         #region 主界面管理块
         /// <summary>
@@ -374,6 +371,5 @@ namespace 软件系统客户端模版
         }
 
         #endregion
->>>>>>> master
     }
 }
