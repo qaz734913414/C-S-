@@ -58,6 +58,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DatabaseSupport\ModelProject.cs" />
     <Compile Include="FormDownloading.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,8 +146,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DatabaseSupport\" />
-    <Folder Include="UIControls\" />
     <Folder Include="UserControls\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

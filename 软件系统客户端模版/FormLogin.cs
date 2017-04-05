@@ -306,6 +306,15 @@ namespace 软件系统客户端模版
                 return;
             }
 
+            result = ModelProject.UpdateProjects();
+            if(!result.IsSuccess)
+            {
+                //访问失败
+                if (IsHandleCreated) Invoke(message_show, result.Message);
+                if (IsHandleCreated) Invoke(thread_finish);
+                return;
+            }
+
             //启动主窗口
             if (IsHandleCreated) Invoke(new Action(() =>
             {

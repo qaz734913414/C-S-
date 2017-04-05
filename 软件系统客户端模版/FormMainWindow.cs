@@ -81,10 +81,21 @@ namespace 软件系统客户端模版
             MainRenderInitialization();
 
             panel3.Paint += delegate (object sender1, PaintEventArgs e1)
-              {
-                  e1.Graphics.DrawLine(Pens.Gray, 0, 220, 146, 220);
-              };
+            {
+                e1.Graphics.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+                PanelPaintHeader(e1.Graphics, 0, "所有项目统计：");
+                PanelPaintHeader(e1.Graphics, 107, "各科项目：");
+                PanelPaintHeader(e1.Graphics, 257, "我的项目：");
+            };
         }
+
+        private void PanelPaintHeader(Graphics g,int location,string head)
+        {
+            g.FillRectangle(Brushes.SkyBlue, 0, location, 146, 20);
+            g.DrawString(head, panel3.Font, Brushes.White, new Point(3, location + 2));
+            g.DrawLine(Pens.Gray, 0, location - 1, 146, location - 1);
+        }
+
         private void FormMainWindow_Shown(object sender, EventArgs e)
         {
             //窗口显示
@@ -374,6 +385,17 @@ namespace 软件系统客户端模版
             }
             if (control != null) SetShowRenderControl(control);
         }
+
+        #endregion
+
+        #region 项目统计块
+
+        public void AnalyzeProjects()
+        {
+
+        }
+
+
 
         #endregion
     }
