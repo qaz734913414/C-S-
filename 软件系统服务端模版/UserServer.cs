@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using BasicFramework;
+using CommonLibrary;
 
 //=========================================================================================
 //
@@ -27,10 +28,10 @@ namespace 软件系统服务端模版
         /// <summary>
         /// 所有账户信息的存储对象，具体的账户类可以根据UserAccount进行扩充
         /// </summary>
-        public static ServerAccounts<UserAccount> ServerAccounts { get; set; } = new ServerAccounts<UserAccount>(
-            new List<UserAccount>() {
+        public static ServerAccounts<UserAccountEx> ServerAccounts { get; set; } = new ServerAccounts<UserAccountEx>(
+            new List<UserAccountEx>() {
                 //示例：新增一个默认的超级管理员
-                new UserAccount()
+                new UserAccountEx()
                 {
                     UserName="admin",
                     Password="123456",
@@ -47,18 +48,5 @@ namespace 软件系统服务端模版
 
     }
 
-    /// <summary>
-    /// 一个扩展的用户账户示例，代替服务器和客户端的账户类即可
-    /// </summary>
-    public class UserAccountEx : UserAccount
-    {
-        /// <summary>
-        /// 用户的年龄
-        /// </summary>
-        public int Age { get; set; } = 0;
-        /// <summary>
-        /// 用户的家庭住址
-        /// </summary>
-        public string HomeAddress { get; set; } = "";
-    }
+    
 }

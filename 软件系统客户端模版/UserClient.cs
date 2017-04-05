@@ -55,7 +55,7 @@ namespace 软件系统客户端模版
         /// <summary>
         /// 当前系统的登录账户
         /// </summary>
-        public static BasicFramework.UserAccount UserAccount { get; set; } = new BasicFramework.UserAccount();
+        public static CommonLibrary.UserAccountEx UserAccount { get; set; } = new CommonLibrary.UserAccountEx();
 
         /// <summary>
         /// 服务器的时间，该时间与服务器同步，每隔10秒钟，防止客户端串改单机时间，可以作为各种时间条件判定

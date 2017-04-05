@@ -393,6 +393,12 @@ namespace 软件系统客户端模版
         public void AnalyzeProjects()
         {
 
+            for(int i=0;i<ModalProject.Projects.Count;i++)
+            {
+                Project project = ModalProject.Projects[i];
+
+
+            }
         }
 
 

@@ -207,7 +207,7 @@ namespace 软件系统客户端模版
             if (result.IsSuccess)
             {
                 //服务器应该返回账户的信息
-                BasicFramework.UserAccount account = JObject.Parse(result.Content).ToObject<BasicFramework.UserAccount>();
+                CommonLibrary.UserAccountEx account = JObject.Parse(result.Content).ToObject<CommonLibrary.UserAccountEx>();
                 if(!account.LoginEnable)
                 {
                     //不允许登录
@@ -306,7 +306,7 @@ namespace 软件系统客户端模版
                 return;
             }
 
-            result = ModelProject.UpdateProjects();
+            result = ModalProject.UpdateProjects();
             if(!result.IsSuccess)
             {
                 //访问失败

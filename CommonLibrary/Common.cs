@@ -35,9 +35,19 @@ namespace CommonLibrary
         
     }
 
-
+    /// <summary>
+    /// 一个扩展的用户账户示例，代替服务器和客户端的账户类即可
+    /// </summary>
     public class UserAccountEx : BasicFramework.UserAccount
     {
+        /// <summary>
+        /// 用户的年龄
+        /// </summary>
+        public int Age { get; set; } = 0;
+        /// <summary>
+        /// 用户的家庭住址
+        /// </summary>
+        public string HomeAddress { get; set; } = "";
         /// <summary>
         /// 所在科室
         /// </summary>

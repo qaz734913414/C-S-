@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>软件系统客户端模版</RootNamespace>
-    <AssemblyName>项目管理系统</AssemblyName>
+    <AssemblyName>项目管理系统客户端</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -146,10 +146,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-=======
-    <Folder Include="UIControls\" />
->>>>>>> origin/master
     <Folder Include="UserControls\" />
   </ItemGroup>
   <ItemGroup>
