@@ -146,7 +146,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
+=======
+    <Folder Include="UIControls\" />
+>>>>>>> origin/master
     <Folder Include="UserControls\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DatabaseSupport\Help.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
