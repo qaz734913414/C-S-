@@ -1,4 +1,4 @@
-﻿namespace 软件系统客户端模版
+﻿namespace 软件系统客户端模版.UIControls
 {
     partial class CreateNewProject
     {

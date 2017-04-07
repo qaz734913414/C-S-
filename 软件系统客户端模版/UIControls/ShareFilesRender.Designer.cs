@@ -47,16 +47,18 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(605, 35);
+            this.panel1.Size = new System.Drawing.Size(619, 35);
             this.panel1.TabIndex = 0;
             // 
             // textBox1
             // 
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(439, 5);
+            this.textBox1.Location = new System.Drawing.Point(426, 5);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(161, 23);
+            this.textBox1.Size = new System.Drawing.Size(187, 23);
             this.textBox1.TabIndex = 9;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -64,7 +66,7 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(395, 8);
+            this.label1.Location = new System.Drawing.Point(374, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 17);
             this.label1.TabIndex = 8;
@@ -76,10 +78,10 @@
             this.userButton_refresh.CustomerInformation = "";
             this.userButton_refresh.EnableColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
             this.userButton_refresh.Font = new System.Drawing.Font("微软雅黑", 9F);
-            this.userButton_refresh.Location = new System.Drawing.Point(80, 4);
-            this.userButton_refresh.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.userButton_refresh.Location = new System.Drawing.Point(93, 3);
+            this.userButton_refresh.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.userButton_refresh.Name = "userButton_refresh";
-            this.userButton_refresh.Size = new System.Drawing.Size(71, 25);
+            this.userButton_refresh.Size = new System.Drawing.Size(84, 27);
             this.userButton_refresh.TabIndex = 7;
             this.userButton_refresh.UIText = "刷新";
             this.userButton_refresh.Click += new System.EventHandler(this.userButton_refresh_Click);
@@ -90,10 +92,10 @@
             this.userButton_upload.CustomerInformation = "";
             this.userButton_upload.EnableColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
             this.userButton_upload.Font = new System.Drawing.Font("微软雅黑", 9F);
-            this.userButton_upload.Location = new System.Drawing.Point(3, 4);
-            this.userButton_upload.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.userButton_upload.Location = new System.Drawing.Point(3, 3);
+            this.userButton_upload.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.userButton_upload.Name = "userButton_upload";
-            this.userButton_upload.Size = new System.Drawing.Size(71, 25);
+            this.userButton_upload.Size = new System.Drawing.Size(84, 27);
             this.userButton_upload.TabIndex = 6;
             this.userButton_upload.UIText = "上传";
             this.userButton_upload.Click += new System.EventHandler(this.userButton_upload_Click);
@@ -104,18 +106,21 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.panel2.Location = new System.Drawing.Point(0, 35);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(605, 291);
+            this.panel2.Size = new System.Drawing.Size(619, 384);
             this.panel2.TabIndex = 1;
             // 
             // ShareFilesRender
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ShareFilesRender";
-            this.Size = new System.Drawing.Size(605, 326);
+            this.Size = new System.Drawing.Size(619, 419);
             this.Load += new System.EventHandler(this.ShareFilesRender_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -52,11 +52,8 @@
             this.更新日志ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.版本号说明ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
-<<<<<<< HEAD
-=======
             this.label_file_count = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
->>>>>>> origin/master
+            this.label34 = new System.Windows.Forms.Label();
             this.linkLabel_logout = new System.Windows.Forms.LinkLabel();
             this.label_factory = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -75,8 +72,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label_Announcement = new System.Windows.Forms.Label();
-<<<<<<< HEAD
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
@@ -103,11 +102,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-=======
->>>>>>> origin/master
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -265,6 +259,7 @@
             this.创建新项目ToolStripMenuItem.Name = "创建新项目ToolStripMenuItem";
             this.创建新项目ToolStripMenuItem.Size = new System.Drawing.Size(184, 30);
             this.创建新项目ToolStripMenuItem.Text = "创建新项目";
+            this.创建新项目ToolStripMenuItem.Click += new System.EventHandler(this.创建新项目ToolStripMenuItem_Click);
             // 
             // 关于ToolStripMenuItem
             // 
@@ -301,7 +296,7 @@
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.label_file_count);
-            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.label34);
             this.panel1.Controls.Add(this.linkLabel_logout);
             this.panel1.Controls.Add(this.label_factory);
             this.panel1.Controls.Add(this.label9);
@@ -326,8 +321,6 @@
             this.panel1.Size = new System.Drawing.Size(224, 421);
             this.panel1.TabIndex = 2;
             // 
-<<<<<<< HEAD
-=======
             // label_file_count
             // 
             this.label_file_count.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -340,16 +333,15 @@
             this.label_file_count.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.label_file_count.Click += new System.EventHandler(this.label_file_count_Click);
             // 
-            // label8
+            // label34
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(8, 143);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(68, 17);
-            this.label8.TabIndex = 17;
-            this.label8.Text = "文件数量：";
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(8, 143);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(68, 17);
+            this.label34.TabIndex = 17;
+            this.label34.Text = "文件数量：";
             // 
->>>>>>> origin/master
             // linkLabel_logout
             // 
             this.linkLabel_logout.AutoSize = true;
@@ -401,11 +393,7 @@
             this.listBox1.Location = new System.Drawing.Point(11, 183);
             this.listBox1.Name = "listBox1";
             this.listBox1.SelectionMode = System.Windows.Forms.SelectionMode.None;
-<<<<<<< HEAD
-            this.listBox1.Size = new System.Drawing.Size(200, 259);
-=======
             this.listBox1.Size = new System.Drawing.Size(200, 242);
->>>>>>> origin/master
             this.listBox1.TabIndex = 12;
             // 
             // label_address
@@ -529,7 +517,6 @@
             this.label_Announcement.Text = "[公告]";
             this.label_Announcement.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-<<<<<<< HEAD
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -567,6 +554,36 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(146, 421);
             this.panel3.TabIndex = 5;
+            // 
+            // label32
+            // 
+            this.label32.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label32.Location = new System.Drawing.Point(85, 65);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(54, 17);
+            this.label32.TabIndex = 27;
+            this.label32.Text = "0";
+            this.label32.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(3, 65);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(68, 17);
+            this.label33.TabIndex = 26;
+            this.label33.Text = "重点项目：";
+            // 
+            // linkLabel2
+            // 
+            this.linkLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.Location = new System.Drawing.Point(4, 352);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(56, 17);
+            this.linkLabel2.TabIndex = 25;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "新建项目";
             // 
             // linkLabel1
             // 
@@ -811,44 +828,12 @@
             // panel2
             // 
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.panel2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.panel2.Location = new System.Drawing.Point(146, 33);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(551, 421);
             this.panel2.TabIndex = 6;
             // 
-            // linkLabel2
-            // 
-            this.linkLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(4, 352);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(56, 17);
-            this.linkLabel2.TabIndex = 25;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "新建项目";
-            // 
-            // label32
-            // 
-            this.label32.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label32.Location = new System.Drawing.Point(85, 65);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(54, 17);
-            this.label32.TabIndex = 27;
-            this.label32.Text = "0";
-            this.label32.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(3, 65);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(68, 17);
-            this.label33.TabIndex = 26;
-            this.label33.Text = "重点项目：";
-            // 
-=======
->>>>>>> origin/master
             // FormMainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -923,7 +908,7 @@
         private System.Windows.Forms.ToolStripMenuItem 注册账号ToolStripMenuItem;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel_time;
         private System.Windows.Forms.LinkLabel linkLabel_logout;
-<<<<<<< HEAD
+
         private System.Windows.Forms.ToolStripMenuItem 项目toolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 创建新项目ToolStripMenuItem;
         private System.Windows.Forms.Panel panel3;
@@ -956,10 +941,10 @@
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.LinkLabel linkLabel2;
-=======
+
         private System.Windows.Forms.Label label_file_count;
-        private System.Windows.Forms.Label label8;
->>>>>>> origin/master
+        private System.Windows.Forms.Label label34;
+
     }
 }
 

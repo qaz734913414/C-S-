@@ -97,19 +97,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-<<<<<<< HEAD
     <Compile Include="UIControls\CreateNewProject.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UIControls\CreateNewProject.Designer.cs">
       <DependentUpon>CreateNewProject.cs</DependentUpon>
-=======
+    </Compile>
     <Compile Include="UIControls\ShareFilesRender.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UIControls\ShareFilesRender.Designer.cs">
       <DependentUpon>ShareFilesRender.cs</DependentUpon>
->>>>>>> origin/master
     </Compile>
     <Compile Include="UserClient.cs" />
     <EmbeddedResource Include="FormDownloading.resx">
@@ -139,13 +137,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <EmbeddedResource Include="UIControls\CreateNewProject.resx">
       <DependentUpon>CreateNewProject.cs</DependentUpon>
-=======
+    </EmbeddedResource>
     <EmbeddedResource Include="UIControls\ShareFilesRender.resx">
       <DependentUpon>ShareFilesRender.cs</DependentUpon>
->>>>>>> origin/master
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

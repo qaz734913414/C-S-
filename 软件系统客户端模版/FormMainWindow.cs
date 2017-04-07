@@ -234,6 +234,11 @@ namespace 软件系统客户端模版
             Close();
         }
 
+        private void 创建新项目ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SetShowRenderControl(UIControls_Create);
+        }
+
         #endregion
 
         #region 异步网络块
@@ -362,7 +367,7 @@ namespace 软件系统客户端模版
         /// 文件显示的控件
         /// </summary>
         private UIControls.ShareFilesRender UIControls_Files { get; set; }
-
+        private UIControls.CreateNewProject UIControls_Create { get; set; }
 
 
 
@@ -390,12 +395,21 @@ namespace 软件系统客户端模版
 
             UIControls_Files = new UIControls.ShareFilesRender()
             {
-                Parent = this,//决定了放在哪个界面显示，此处仅仅是测试
-                Visible = true,
-                Location = new Point(100, 100),
-                //Dock = DockStyle.Fill,
+                Visible = false,
+                Dock = DockStyle.Fill,
+                Parent = panel2,//决定了放在哪个界面显示，此处仅仅是测试
             };
             all_main_render.Add(UIControls_Files);
+
+
+            UIControls_Create = new UIControls.CreateNewProject()
+            {
+                Visible = false,
+                Dock = DockStyle.Fill,
+                Parent = panel2,
+            };
+            all_main_render.Add(UIControls_Create);
+
         }
 
         private void SetShowRenderControl(UserControl control)
@@ -428,8 +442,7 @@ namespace 软件系统客户端模版
         }
 
         #endregion
-
-<<<<<<< HEAD
+        
         #region 项目统计块
 
         public void AnalyzeProjects()
@@ -446,10 +459,7 @@ namespace 软件系统客户端模版
 
 
         #endregion
-=======
 
-
-
->>>>>>> origin/master
+        
     }
 }
