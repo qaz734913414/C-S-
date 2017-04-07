@@ -52,6 +52,11 @@
             this.更新日志ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.版本号说明ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
+<<<<<<< HEAD
+=======
+            this.label_file_count = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+>>>>>>> origin/master
             this.linkLabel_logout = new System.Windows.Forms.LinkLabel();
             this.label_factory = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -70,6 +75,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label_Announcement = new System.Windows.Forms.Label();
+<<<<<<< HEAD
             this.panel3 = new System.Windows.Forms.Panel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -100,6 +106,8 @@
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.label32 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
+=======
+>>>>>>> origin/master
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -292,6 +300,8 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label_file_count);
+            this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.linkLabel_logout);
             this.panel1.Controls.Add(this.label_factory);
             this.panel1.Controls.Add(this.label9);
@@ -316,6 +326,30 @@
             this.panel1.Size = new System.Drawing.Size(224, 421);
             this.panel1.TabIndex = 2;
             // 
+<<<<<<< HEAD
+=======
+            // label_file_count
+            // 
+            this.label_file_count.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label_file_count.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label_file_count.Location = new System.Drawing.Point(82, 143);
+            this.label_file_count.Name = "label_file_count";
+            this.label_file_count.Size = new System.Drawing.Size(129, 17);
+            this.label_file_count.TabIndex = 18;
+            this.label_file_count.Text = "0";
+            this.label_file_count.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.label_file_count.Click += new System.EventHandler(this.label_file_count_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(8, 143);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(68, 17);
+            this.label8.TabIndex = 17;
+            this.label8.Text = "文件数量：";
+            // 
+>>>>>>> origin/master
             // linkLabel_logout
             // 
             this.linkLabel_logout.AutoSize = true;
@@ -349,7 +383,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.Color.DimGray;
-            this.label7.Location = new System.Drawing.Point(8, 146);
+            this.label7.Location = new System.Drawing.Point(8, 163);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(104, 17);
             this.label7.TabIndex = 13;
@@ -364,10 +398,14 @@
             this.listBox1.ForeColor = System.Drawing.Color.ForestGreen;
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 17;
-            this.listBox1.Location = new System.Drawing.Point(11, 166);
+            this.listBox1.Location = new System.Drawing.Point(11, 183);
             this.listBox1.Name = "listBox1";
             this.listBox1.SelectionMode = System.Windows.Forms.SelectionMode.None;
+<<<<<<< HEAD
             this.listBox1.Size = new System.Drawing.Size(200, 259);
+=======
+            this.listBox1.Size = new System.Drawing.Size(200, 242);
+>>>>>>> origin/master
             this.listBox1.TabIndex = 12;
             // 
             // label_address
@@ -491,6 +529,7 @@
             this.label_Announcement.Text = "[公告]";
             this.label_Announcement.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+<<<<<<< HEAD
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -808,6 +847,8 @@
             this.label33.TabIndex = 26;
             this.label33.Text = "重点项目：";
             // 
+=======
+>>>>>>> origin/master
             // FormMainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -882,6 +923,7 @@
         private System.Windows.Forms.ToolStripMenuItem 注册账号ToolStripMenuItem;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel_time;
         private System.Windows.Forms.LinkLabel linkLabel_logout;
+<<<<<<< HEAD
         private System.Windows.Forms.ToolStripMenuItem 项目toolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 创建新项目ToolStripMenuItem;
         private System.Windows.Forms.Panel panel3;
@@ -914,6 +956,10 @@
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.LinkLabel linkLabel2;
+=======
+        private System.Windows.Forms.Label label_file_count;
+        private System.Windows.Forms.Label label8;
+>>>>>>> origin/master
     }
 }
 
