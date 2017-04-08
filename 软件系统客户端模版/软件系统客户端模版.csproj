@@ -110,6 +110,12 @@
       <DependentUpon>ShareFilesRender.cs</DependentUpon>
     </Compile>
     <Compile Include="UserClient.cs" />
+    <Compile Include="UserControls\ProjectItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ProjectItem.Designer.cs">
+      <DependentUpon>ProjectItem.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FormDownloading.resx">
       <DependentUpon>FormDownloading.cs</DependentUpon>
     </EmbeddedResource>
@@ -143,6 +149,9 @@
     <EmbeddedResource Include="UIControls\ShareFilesRender.resx">
       <DependentUpon>ShareFilesRender.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ProjectItem.resx">
+      <DependentUpon>ProjectItem.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -154,9 +163,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="UserControls\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="DatabaseSupport\Help.txt" />
   </ItemGroup>

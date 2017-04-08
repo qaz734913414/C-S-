@@ -49,21 +49,13 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-<<<<<<< HEAD
-            this.panel1.Size = new System.Drawing.Size(619, 35);
-=======
             this.panel1.Size = new System.Drawing.Size(706, 35);
->>>>>>> origin/master
             this.panel1.TabIndex = 0;
             // 
             // textBox1
             // 
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-<<<<<<< HEAD
-            this.textBox1.Location = new System.Drawing.Point(426, 5);
-=======
             this.textBox1.Location = new System.Drawing.Point(513, 5);
->>>>>>> origin/master
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(187, 23);
@@ -74,11 +66,7 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-<<<<<<< HEAD
-            this.label1.Location = new System.Drawing.Point(374, 9);
-=======
             this.label1.Location = new System.Drawing.Point(462, 9);
->>>>>>> origin/master
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 17);
             this.label1.TabIndex = 8;
@@ -90,11 +78,7 @@
             this.userButton_refresh.CustomerInformation = "";
             this.userButton_refresh.EnableColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
             this.userButton_refresh.Font = new System.Drawing.Font("微软雅黑", 9F);
-<<<<<<< HEAD
-            this.userButton_refresh.Location = new System.Drawing.Point(93, 3);
-=======
-            this.userButton_refresh.Location = new System.Drawing.Point(80, 4);
->>>>>>> origin/master
+            this.userButton_refresh.Location = new System.Drawing.Point(93, 4);
             this.userButton_refresh.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.userButton_refresh.Name = "userButton_refresh";
             this.userButton_refresh.Size = new System.Drawing.Size(84, 27);
@@ -108,11 +92,7 @@
             this.userButton_upload.CustomerInformation = "";
             this.userButton_upload.EnableColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
             this.userButton_upload.Font = new System.Drawing.Font("微软雅黑", 9F);
-<<<<<<< HEAD
-            this.userButton_upload.Location = new System.Drawing.Point(3, 3);
-=======
             this.userButton_upload.Location = new System.Drawing.Point(3, 4);
->>>>>>> origin/master
             this.userButton_upload.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.userButton_upload.Name = "userButton_upload";
             this.userButton_upload.Size = new System.Drawing.Size(84, 27);
@@ -128,11 +108,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 35);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-<<<<<<< HEAD
-            this.panel2.Size = new System.Drawing.Size(619, 384);
-=======
             this.panel2.Size = new System.Drawing.Size(706, 427);
->>>>>>> origin/master
             this.panel2.TabIndex = 1;
             // 
             // ShareFilesRender
@@ -144,11 +120,7 @@
             this.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ShareFilesRender";
-<<<<<<< HEAD
-            this.Size = new System.Drawing.Size(619, 419);
-=======
             this.Size = new System.Drawing.Size(706, 462);
->>>>>>> origin/master
             this.Load += new System.EventHandler(this.ShareFilesRender_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

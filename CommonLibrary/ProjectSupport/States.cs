@@ -23,4 +23,16 @@ namespace CommonLibrary
         /// </summary>
         public static int Manager { get; } = 2;
     }
+
+    public abstract class ProjectPriority
+    {
+        /// <summary>
+        /// 一般项目
+        /// </summary>
+        public static int Normal { get; } = 0;
+        /// <summary>
+        /// 重大项目
+        /// </summary>
+        public static int Significant { get; } = 1;
+    }
 }

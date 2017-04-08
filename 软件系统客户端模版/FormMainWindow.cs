@@ -442,17 +442,34 @@ namespace 软件系统客户端模版
         }
 
         #endregion
-        
+
         #region 项目统计块
 
         public void AnalyzeProjects()
         {
+            int overdeadline = 0;
+            int significant = 0;
 
-            for(int i=0;i<ModalProject.Projects.Count;i++)
+            int department1 = 0;
+            int department2 = 0;
+            int department3 = 0;
+            int department4 = 0;
+            int department5 = 0;
+            int department6 = 0;
+
+            int takecharge = 0;
+            int takepart = 0;
+
+            for (int i = 0; i < ModalProject.Projects.Count; i++)
             {
                 Project project = ModalProject.Projects[i];
 
+                if ((UserClient.DateTimeServer - project.DatePlanFinish).TotalDays < 1)
+                {
+                    overdeadline++;
+                }
 
+                if(project.ProjectPriority)
             }
         }
 
