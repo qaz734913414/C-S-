@@ -354,6 +354,20 @@ namespace CommonLibrary
             }
         }
 
+        /// <summary>
+        /// 判断指定名称的人是否在项目成员中
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
+        public bool IsSpecifiedMemberIn(string name)
+        {
+            for (int i = 0; i < AllMembers.Count; i++)
+            {
+                if (AllMembers[i].MemberName == name) return true;
+            }
+            return false;
+        }
+
         private object lock_list_operate = new object();
     }
 }

@@ -118,6 +118,9 @@ namespace 软件系统客户端模版
                 账户管理ToolStripMenuItem.Enabled = false;
                 远程更新ToolStripMenuItem.Enabled = false;
             }
+
+            //刷新项目显示
+            AnalyzeProjects();
         }
         private void FormMainWindow_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -445,6 +448,9 @@ namespace 软件系统客户端模版
 
         #region 项目统计块
 
+        /// <summary>
+        /// 分析出项目数据
+        /// </summary>
         public void AnalyzeProjects()
         {
             int overdeadline = 0;
@@ -469,8 +475,65 @@ namespace 软件系统客户端模版
                     overdeadline++;
                 }
 
-                if(project.ProjectPriority)
+                if (project.ProjectPriority > 0)
+                {
+                    significant++;
+                }
+
+                if(project.ProjectDepartment=="技术一科")
+                {
+                    department1++;
+                }
+
+                if (project.ProjectDepartment == "技术二科")
+                {
+                    department2++;
+                }
+
+                if (project.ProjectDepartment == "技术三科")
+                {
+                    department3++;
+                }
+
+                if (project.ProjectDepartment == "综合科")
+                {
+                    department4++;
+                }
+
+                if (project.ProjectDepartment == "设备科")
+                {
+                    department5++;
+                }
+
+                if (project.ProjectDepartment == "计量科")
+                {
+                    department6++;
+                }
+
+                if(project.Leader==UserClient.UserAccount.UserName)
+                {
+                    takecharge++;
+                }
+
+                if(project.Members.IsSpecifiedMemberIn(UserClient.UserAccount.UserName))
+                {
+                    takepart++;
+                }
             }
+
+
+            label10.Text = ModalProject.Projects.Count.ToString();
+            label23.Text = overdeadline.ToString();
+            label32.Text = significant.ToString();
+            label25.Text = ModalProject.RecentlyFinishProjects.Count.ToString();
+            label11.Text = department1.ToString();
+            label13.Text = department2.ToString();
+            label15.Text = department3.ToString();
+            label17.Text = department4.ToString();
+            label19.Text = department5.ToString();
+            label21.Text = department6.ToString();
+            label25.Text = takecharge.ToString();
+            label27.Text = takepart.ToString();
         }
 
 

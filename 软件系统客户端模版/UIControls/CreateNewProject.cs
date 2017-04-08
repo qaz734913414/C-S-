@@ -14,6 +14,10 @@ namespace 软件系统客户端模版.UIControls
         public CreateNewProject()
         {
             InitializeComponent();
+
+            comboBox1.DataSource = CommonLibrary.BasicOptions.Belongs;
+            comboBox2.DataSource = CommonLibrary.BasicOptions.ProjectGrade;
+            comboBox4.DataSource = CommonLibrary.BasicOptions.ProjectCategroy;
         }
 
         private void CreateNewProject_Load(object sender, EventArgs e)

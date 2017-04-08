@@ -71,6 +71,7 @@ namespace 软件系统客户端模版
                 CommonLibrary.CommonLibrary.Port_Second_Net))
         {
             KeyToken = CommonLibrary.CommonHeadCode.KeyToken,
+            ConnectTimeout = 3100,
         };
     }
 }
