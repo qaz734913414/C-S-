@@ -55,6 +55,7 @@
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
             this.userButton1 = new BasicFramework.UserButton();
+            this.comboBoxEx1 = new 软件系统客户端模版.UserControls.ComboBoxEx();
             this.SuspendLayout();
             // 
             // label1
@@ -79,15 +80,16 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(79, 36);
+            this.textBox1.MaxLength = 30;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(301, 23);
+            this.textBox1.Size = new System.Drawing.Size(334, 23);
             this.textBox1.TabIndex = 2;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.Gray;
-            this.label3.Location = new System.Drawing.Point(386, 39);
+            this.label3.Location = new System.Drawing.Point(419, 39);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(66, 17);
             this.label3.TabIndex = 3;
@@ -109,6 +111,7 @@
             this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox2.Location = new System.Drawing.Point(79, 66);
+            this.textBox2.MaxLength = 80;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(532, 23);
             this.textBox2.TabIndex = 5;
@@ -164,7 +167,7 @@
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(79, 132);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(132, 25);
+            this.comboBox3.Size = new System.Drawing.Size(210, 25);
             this.comboBox3.TabIndex = 12;
             // 
             // label8
@@ -181,6 +184,7 @@
             this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox3.Location = new System.Drawing.Point(79, 165);
+            this.textBox3.MaxLength = 500;
             this.textBox3.Name = "textBox3";
             this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(532, 23);
@@ -255,6 +259,7 @@
             this.textBox_CurrentNode.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_CurrentNode.Location = new System.Drawing.Point(77, 228);
+            this.textBox_CurrentNode.MaxLength = 200;
             this.textBox_CurrentNode.Multiline = true;
             this.textBox_CurrentNode.Name = "textBox_CurrentNode";
             this.textBox_CurrentNode.Size = new System.Drawing.Size(604, 89);
@@ -311,11 +316,22 @@
             this.userButton1.TabIndex = 26;
             this.userButton1.UIText = "创建项目";
             // 
+            // comboBoxEx1
+            // 
+            this.comboBoxEx1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBoxEx1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxEx1.FormattingEnabled = true;
+            this.comboBoxEx1.Location = new System.Drawing.Point(306, 132);
+            this.comboBoxEx1.Name = "comboBoxEx1";
+            this.comboBoxEx1.Size = new System.Drawing.Size(240, 24);
+            this.comboBoxEx1.TabIndex = 27;
+            // 
             // CreateNewProject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+            this.Controls.Add(this.comboBoxEx1);
             this.Controls.Add(this.userButton1);
             this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.label15);
@@ -382,5 +398,6 @@
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.Label label15;
         private BasicFramework.UserButton userButton1;
+        private UserControls.ComboBoxEx comboBoxEx1;
     }
 }

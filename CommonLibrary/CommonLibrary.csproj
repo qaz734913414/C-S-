@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="Common.cs" />
     <Compile Include="HeadCode.cs" />
+    <Compile Include="ProjectSupport\Account.cs" />
     <Compile Include="ProjectSupport\Project.cs" />
     <Compile Include="ProjectSupport\States.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

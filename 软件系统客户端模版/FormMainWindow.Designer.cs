@@ -118,7 +118,7 @@
             this.toolStripStatusLabel_status,
             this.toolStripStatusLabel4,
             this.toolStripStatusLabel_time});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 454);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 462);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(921, 22);
             this.statusStrip1.TabIndex = 0;
@@ -318,7 +318,7 @@
             this.panel1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.panel1.Location = new System.Drawing.Point(697, 35);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(224, 419);
+            this.panel1.Size = new System.Drawing.Size(224, 427);
             this.panel1.TabIndex = 2;
             // 
             // label_file_count
@@ -393,7 +393,7 @@
             this.listBox1.Location = new System.Drawing.Point(11, 183);
             this.listBox1.Name = "listBox1";
             this.listBox1.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.listBox1.Size = new System.Drawing.Size(200, 225);
+            this.listBox1.Size = new System.Drawing.Size(200, 242);
             this.listBox1.TabIndex = 12;
             // 
             // label_address
@@ -552,7 +552,7 @@
             this.panel3.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.panel3.Location = new System.Drawing.Point(0, 35);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(146, 419);
+            this.panel3.Size = new System.Drawing.Size(146, 427);
             this.panel3.TabIndex = 5;
             // 
             // label32
@@ -578,7 +578,7 @@
             // 
             this.linkLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(4, 350);
+            this.linkLabel2.Location = new System.Drawing.Point(4, 358);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(56, 17);
             this.linkLabel2.TabIndex = 25;
@@ -589,7 +589,7 @@
             // 
             this.linkLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(107, 371);
+            this.linkLabel1.Location = new System.Drawing.Point(107, 379);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(32, 17);
             this.linkLabel1.TabIndex = 24;
@@ -600,7 +600,7 @@
             // 
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(6, 391);
+            this.textBox1.Location = new System.Drawing.Point(6, 399);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(133, 23);
             this.textBox1.TabIndex = 23;
@@ -610,7 +610,7 @@
             this.label31.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label31.AutoSize = true;
             this.label31.ForeColor = System.Drawing.Color.Gray;
-            this.label31.Location = new System.Drawing.Point(4, 371);
+            this.label31.Location = new System.Drawing.Point(4, 379);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(68, 17);
             this.label31.TabIndex = 22;
@@ -831,14 +831,14 @@
             this.panel2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.panel2.Location = new System.Drawing.Point(146, 35);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(551, 419);
+            this.panel2.Size = new System.Drawing.Size(551, 427);
             this.panel2.TabIndex = 6;
             // 
             // FormMainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(921, 476);
+            this.ClientSize = new System.Drawing.Size(921, 484);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label_Announcement);

@@ -18,6 +18,9 @@ namespace 软件系统客户端模版.UIControls
             comboBox1.DataSource = CommonLibrary.BasicOptions.Belongs;
             comboBox2.DataSource = CommonLibrary.BasicOptions.ProjectGrade;
             comboBox4.DataSource = CommonLibrary.BasicOptions.ProjectCategroy;
+            comboBox3.DataSource = ModalProject.DepartmentAccounts.ToArray();
+
+            comboBoxEx1.DataSource = ModalProject.DepartmentAccounts.ToArray();
         }
 
         private void CreateNewProject_Load(object sender, EventArgs e)
@@ -29,6 +32,7 @@ namespace 软件系统客户端模版.UIControls
 
 
         }
-        
+
+       
     }
 }

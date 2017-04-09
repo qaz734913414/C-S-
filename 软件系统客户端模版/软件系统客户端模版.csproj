@@ -110,6 +110,9 @@
       <DependentUpon>ShareFilesRender.cs</DependentUpon>
     </Compile>
     <Compile Include="UserClient.cs" />
+    <Compile Include="UserControls\InheritControls.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="UserControls\ProjectItem.cs">
       <SubType>UserControl</SubType>
     </Compile>

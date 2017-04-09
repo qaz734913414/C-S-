@@ -17,6 +17,11 @@ namespace 软件系统客户端模版
         /// 近期完成的项目
         /// </summary>
         public static List<Project> RecentlyFinishProjects { get; set; } = null;
+
+        /// <summary>
+        /// 部门所有的账户信息
+        /// </summary>
+        public static List<Account> DepartmentAccounts { get; set; } = null;
         /// <summary>
         /// 更新所有的执行中项目和近一周执行完成的项目
         /// </summary>
@@ -28,6 +33,8 @@ namespace 软件系统客户端模版
             {
                 Projects = Project.GetFromDatabase();
                 RecentlyFinishProjects = Project.GetDaysFinishFromDatabase(UserClient.DateTimeServer.AddDays(-7));
+                DepartmentAccounts = BasicFramework.SoftSqlOperate.ExecuteSelectEnumerable<Account>(
+                    SqlServerSupport.SqlConnectStr, Account.SqlSelected);
                 result.IsSuccess = true;
                 return result;
             }
