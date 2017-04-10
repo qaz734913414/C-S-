@@ -39,7 +39,6 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -160,15 +159,6 @@
             this.label7.Size = new System.Drawing.Size(68, 17);
             this.label7.TabIndex = 9;
             this.label7.Text = "项目等级：";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(79, 132);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(210, 25);
-            this.comboBox3.TabIndex = 12;
             // 
             // label8
             // 
@@ -321,9 +311,9 @@
             this.comboBoxEx1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBoxEx1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxEx1.FormattingEnabled = true;
-            this.comboBoxEx1.Location = new System.Drawing.Point(306, 132);
+            this.comboBoxEx1.Location = new System.Drawing.Point(79, 133);
             this.comboBoxEx1.Name = "comboBoxEx1";
-            this.comboBoxEx1.Size = new System.Drawing.Size(240, 24);
+            this.comboBoxEx1.Size = new System.Drawing.Size(185, 24);
             this.comboBoxEx1.TabIndex = 27;
             // 
             // CreateNewProject
@@ -346,7 +336,6 @@
             this.Controls.Add(this.userButton_login);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.label7);
@@ -382,7 +371,6 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label9;

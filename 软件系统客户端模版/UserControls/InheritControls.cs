@@ -12,37 +12,32 @@ namespace 软件系统客户端模版.UserControls
         public ComboBoxEx()
         {
             InitializeComponent();
-            DrawMode = DrawMode.OwnerDrawVariable;//手动绘制所有元素
+            DrawMode = DrawMode.OwnerDrawFixed;//手动绘制所有元素
+            MaxDropDownItems = 20;
         }
 
         protected override void OnDrawItem(DrawItemEventArgs e)
         {
-            base.OnDrawItem(e);
             Rectangle rec = e.Bounds;
             e.Graphics.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            e.DrawBackground();
-            
-            if (Items[e.Index] is CommonLibrary.Account account)
-            {
-                //if (e.State == DrawItemState.Selected)
-                //{
-                //    //this code keeps the last item drawn from having a Bisque background. 
-                //    //e.Graphics.FillRectangle(Brushes.Bisque, e.Bounds);
 
-                //    e.Graphics.DrawString(account.姓名, Font, Brushes.White, rec);
-                //    rec.Offset(100, 0);
-                //    e.Graphics.DrawString(account.科名, Font, Brushes.White, rec);
-                //}
-                //else
-                //{
-                    e.Graphics.DrawString(account.姓名, Font, Brushes.Black, rec);
-                    rec.Offset(100, 0);
-                    e.Graphics.DrawString(account.科名, Font, Brushes.Gray, rec);
-               // }
+            if ((e.State & DrawItemState.ComboBoxEdit) == 0)
+            {
+                e.DrawBackground();
             }
 
-            //e.DrawFocusRectangle();
-
+            if (e.Index >= 0)
+            {
+                if (Items[e.Index] is CommonLibrary.Account account)
+                {
+                    e.Graphics.DrawString(account.姓名, Font, Brushes.Black, rec);
+                    rec.Offset(60, 0);
+                    e.Graphics.DrawString(account.科名, Font, Brushes.Gray, rec);
+                    rec.Offset(70, 0);
+                    if (account.职位 != "普通") e.Graphics.DrawString(account.职位, Font, Brushes.Red, rec);
+                }
+            }
+            e.DrawFocusRectangle();
         }
 
 
