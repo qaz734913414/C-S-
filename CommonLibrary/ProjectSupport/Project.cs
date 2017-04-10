@@ -353,6 +353,44 @@ namespace CommonLibrary
                 AllMembers.Add(item);
             }
         }
+        /// <summary>
+        /// 删除一个成员
+        /// </summary>
+        /// <param name="name"></param>
+        public void ItemDelete(string name)
+        {
+            for (int i = AllMembers.Count - 1; i >= 0; i--)
+            {
+                if(AllMembers[i].MemberName == name)
+                {
+                    AllMembers.RemoveAt(i);
+                    break;
+                }
+            }
+        }
+
+        /// <summary>
+        /// 获取本对象的JSON表示方式
+        /// </summary>
+        /// <returns>字符串</returns>
+        public override string ToString()
+        {
+            return JObject.FromObject(this).ToString();
+        }
+
+        /// <summary>
+        /// 获取用于显示的字符串文本
+        /// </summary>
+        /// <returns></returns>
+        public string ToShowCreate()
+        {
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < AllMembers.Count; i++)
+            {
+                sb.Append(AllMembers[i].MemberName + ",");
+            }
+            return sb.ToString();
+        }
 
         /// <summary>
         /// 判断指定名称的人是否在项目成员中

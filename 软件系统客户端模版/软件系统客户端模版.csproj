@@ -83,6 +83,12 @@
     <Compile Include="FormMainWindow.Designer.cs">
       <DependentUpon>FormMainWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormMemberSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMemberSelect.Designer.cs">
+      <DependentUpon>FormMemberSelect.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormRegisterAccount.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +136,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMainWindow.resx">
       <DependentUpon>FormMainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMemberSelect.resx">
+      <DependentUpon>FormMemberSelect.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormRegisterAccount.resx">
       <DependentUpon>FormRegisterAccount.cs</DependentUpon>

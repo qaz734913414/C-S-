@@ -320,6 +320,14 @@ namespace 软件系统客户端模版
                     label_file_count.Text = object2.Substring(4);
                 }));
             }
+            else if(head_code == CommonHeadCode.MultiNetHeadCode.时间推送)
+            {
+                UserClient.DateTimeServer = Convert.ToDateTime(object2.Substring(4));
+                if (IsHandleCreated) Invoke(new Action(() =>
+                {
+                    toolStripStatusLabel_time.Text = UserClient.DateTimeServer.ToString("yyyy-MM-dd HH:mm");
+                }));
+            }
         }
 
         private void Net_socket_client_AcceptByte(HuTcpState object1, byte[] object2)

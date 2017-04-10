@@ -202,6 +202,7 @@
             this.userButton_login.Size = new System.Drawing.Size(64, 25);
             this.userButton_login.TabIndex = 15;
             this.userButton_login.UIText = "选择";
+            this.userButton_login.Click += new System.EventHandler(this.userButton_login_Click);
             // 
             // label10
             // 
@@ -305,10 +306,11 @@
             this.userButton1.Size = new System.Drawing.Size(217, 35);
             this.userButton1.TabIndex = 26;
             this.userButton1.UIText = "创建项目";
+            this.userButton1.Click += new System.EventHandler(this.userButton1_Click);
             // 
             // comboBoxEx1
             // 
-            this.comboBoxEx1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBoxEx1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.comboBoxEx1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxEx1.FormattingEnabled = true;
             this.comboBoxEx1.Location = new System.Drawing.Point(79, 133);

@@ -180,7 +180,7 @@
             this.关于ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(921, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(921, 35);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -193,41 +193,41 @@
             this.远程更新ToolStripMenuItem,
             this.注册账号ToolStripMenuItem});
             this.管理员ToolStripMenuItem.Name = "管理员ToolStripMenuItem";
-            this.管理员ToolStripMenuItem.Size = new System.Drawing.Size(84, 29);
+            this.管理员ToolStripMenuItem.Size = new System.Drawing.Size(84, 31);
             this.管理员ToolStripMenuItem.Text = "管理员";
             // 
             // 更改公告ToolStripMenuItem
             // 
             this.更改公告ToolStripMenuItem.Name = "更改公告ToolStripMenuItem";
-            this.更改公告ToolStripMenuItem.Size = new System.Drawing.Size(164, 30);
+            this.更改公告ToolStripMenuItem.Size = new System.Drawing.Size(164, 32);
             this.更改公告ToolStripMenuItem.Text = "更改公告";
             this.更改公告ToolStripMenuItem.Click += new System.EventHandler(this.更改公告ToolStripMenuItem_Click);
             // 
             // 日志查看ToolStripMenuItem
             // 
             this.日志查看ToolStripMenuItem.Name = "日志查看ToolStripMenuItem";
-            this.日志查看ToolStripMenuItem.Size = new System.Drawing.Size(164, 30);
+            this.日志查看ToolStripMenuItem.Size = new System.Drawing.Size(164, 32);
             this.日志查看ToolStripMenuItem.Text = "日志查看";
             this.日志查看ToolStripMenuItem.Click += new System.EventHandler(this.日志查看ToolStripMenuItem_Click);
             // 
             // 账户管理ToolStripMenuItem
             // 
             this.账户管理ToolStripMenuItem.Name = "账户管理ToolStripMenuItem";
-            this.账户管理ToolStripMenuItem.Size = new System.Drawing.Size(164, 30);
+            this.账户管理ToolStripMenuItem.Size = new System.Drawing.Size(164, 32);
             this.账户管理ToolStripMenuItem.Text = "账户管理";
             this.账户管理ToolStripMenuItem.Click += new System.EventHandler(this.账户管理ToolStripMenuItem_Click);
             // 
             // 远程更新ToolStripMenuItem
             // 
             this.远程更新ToolStripMenuItem.Name = "远程更新ToolStripMenuItem";
-            this.远程更新ToolStripMenuItem.Size = new System.Drawing.Size(164, 30);
+            this.远程更新ToolStripMenuItem.Size = new System.Drawing.Size(164, 32);
             this.远程更新ToolStripMenuItem.Text = "远程更新";
             this.远程更新ToolStripMenuItem.Click += new System.EventHandler(this.远程更新ToolStripMenuItem_Click);
             // 
             // 注册账号ToolStripMenuItem
             // 
             this.注册账号ToolStripMenuItem.Name = "注册账号ToolStripMenuItem";
-            this.注册账号ToolStripMenuItem.Size = new System.Drawing.Size(164, 30);
+            this.注册账号ToolStripMenuItem.Size = new System.Drawing.Size(164, 32);
             this.注册账号ToolStripMenuItem.Text = "注册账号";
             this.注册账号ToolStripMenuItem.Click += new System.EventHandler(this.注册账号ToolStripMenuItem_Click);
             // 
@@ -236,13 +236,13 @@
             this.设置ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.修改密码ToolStripMenuItem});
             this.设置ToolStripMenuItem.Name = "设置ToolStripMenuItem";
-            this.设置ToolStripMenuItem.Size = new System.Drawing.Size(64, 29);
+            this.设置ToolStripMenuItem.Size = new System.Drawing.Size(64, 31);
             this.设置ToolStripMenuItem.Text = "设置";
             // 
             // 修改密码ToolStripMenuItem
             // 
             this.修改密码ToolStripMenuItem.Name = "修改密码ToolStripMenuItem";
-            this.修改密码ToolStripMenuItem.Size = new System.Drawing.Size(164, 30);
+            this.修改密码ToolStripMenuItem.Size = new System.Drawing.Size(164, 32);
             this.修改密码ToolStripMenuItem.Text = "修改密码";
             this.修改密码ToolStripMenuItem.Click += new System.EventHandler(this.修改密码ToolStripMenuItem_Click);
             // 
@@ -251,13 +251,13 @@
             this.项目toolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.创建新项目ToolStripMenuItem});
             this.项目toolStripMenuItem.Name = "项目toolStripMenuItem";
-            this.项目toolStripMenuItem.Size = new System.Drawing.Size(64, 29);
+            this.项目toolStripMenuItem.Size = new System.Drawing.Size(64, 31);
             this.项目toolStripMenuItem.Text = "项目";
             // 
             // 创建新项目ToolStripMenuItem
             // 
             this.创建新项目ToolStripMenuItem.Name = "创建新项目ToolStripMenuItem";
-            this.创建新项目ToolStripMenuItem.Size = new System.Drawing.Size(184, 30);
+            this.创建新项目ToolStripMenuItem.Size = new System.Drawing.Size(184, 32);
             this.创建新项目ToolStripMenuItem.Text = "创建新项目";
             this.创建新项目ToolStripMenuItem.Click += new System.EventHandler(this.创建新项目ToolStripMenuItem_Click);
             // 
@@ -268,27 +268,27 @@
             this.更新日志ToolStripMenuItem,
             this.版本号说明ToolStripMenuItem});
             this.关于ToolStripMenuItem.Name = "关于ToolStripMenuItem";
-            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(64, 29);
+            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(64, 31);
             this.关于ToolStripMenuItem.Text = "关于";
             // 
             // 关于本软件ToolStripMenuItem
             // 
             this.关于本软件ToolStripMenuItem.Name = "关于本软件ToolStripMenuItem";
-            this.关于本软件ToolStripMenuItem.Size = new System.Drawing.Size(184, 30);
+            this.关于本软件ToolStripMenuItem.Size = new System.Drawing.Size(184, 32);
             this.关于本软件ToolStripMenuItem.Text = "关于本软件";
             this.关于本软件ToolStripMenuItem.Click += new System.EventHandler(this.关于本软件ToolStripMenuItem_Click);
             // 
             // 更新日志ToolStripMenuItem
             // 
             this.更新日志ToolStripMenuItem.Name = "更新日志ToolStripMenuItem";
-            this.更新日志ToolStripMenuItem.Size = new System.Drawing.Size(184, 30);
+            this.更新日志ToolStripMenuItem.Size = new System.Drawing.Size(184, 32);
             this.更新日志ToolStripMenuItem.Text = "更新日志";
             this.更新日志ToolStripMenuItem.Click += new System.EventHandler(this.更新日志ToolStripMenuItem_Click);
             // 
             // 版本号说明ToolStripMenuItem
             // 
             this.版本号说明ToolStripMenuItem.Name = "版本号说明ToolStripMenuItem";
-            this.版本号说明ToolStripMenuItem.Size = new System.Drawing.Size(184, 30);
+            this.版本号说明ToolStripMenuItem.Size = new System.Drawing.Size(184, 32);
             this.版本号说明ToolStripMenuItem.Text = "版本号说明";
             this.版本号说明ToolStripMenuItem.Click += new System.EventHandler(this.版本号说明ToolStripMenuItem_Click);
             // 
@@ -316,9 +316,9 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.panel1.Location = new System.Drawing.Point(697, 33);
+            this.panel1.Location = new System.Drawing.Point(697, 35);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(224, 429);
+            this.panel1.Size = new System.Drawing.Size(224, 427);
             this.panel1.TabIndex = 2;
             // 
             // label_file_count
@@ -393,7 +393,7 @@
             this.listBox1.Location = new System.Drawing.Point(11, 183);
             this.listBox1.Name = "listBox1";
             this.listBox1.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.listBox1.Size = new System.Drawing.Size(200, 242);
+            this.listBox1.Size = new System.Drawing.Size(200, 225);
             this.listBox1.TabIndex = 12;
             // 
             // label_address
@@ -550,14 +550,15 @@
             this.panel3.Controls.Add(this.label8);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.panel3.Location = new System.Drawing.Point(0, 33);
+            this.panel3.Location = new System.Drawing.Point(0, 35);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(146, 429);
+            this.panel3.Size = new System.Drawing.Size(146, 427);
             this.panel3.TabIndex = 5;
             // 
             // label32
             // 
             this.label32.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label32.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label32.Location = new System.Drawing.Point(85, 65);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(54, 17);
@@ -578,7 +579,7 @@
             // 
             this.linkLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(4, 360);
+            this.linkLabel2.Location = new System.Drawing.Point(4, 358);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(56, 17);
             this.linkLabel2.TabIndex = 25;
@@ -589,7 +590,7 @@
             // 
             this.linkLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(107, 381);
+            this.linkLabel1.Location = new System.Drawing.Point(107, 379);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(32, 17);
             this.linkLabel1.TabIndex = 24;
@@ -600,7 +601,7 @@
             // 
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(6, 401);
+            this.textBox1.Location = new System.Drawing.Point(6, 399);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(133, 23);
             this.textBox1.TabIndex = 23;
@@ -610,7 +611,7 @@
             this.label31.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label31.AutoSize = true;
             this.label31.ForeColor = System.Drawing.Color.Gray;
-            this.label31.Location = new System.Drawing.Point(4, 381);
+            this.label31.Location = new System.Drawing.Point(4, 379);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(68, 17);
             this.label31.TabIndex = 22;
@@ -619,6 +620,7 @@
             // label29
             // 
             this.label29.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label29.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label29.Location = new System.Drawing.Point(85, 303);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(54, 17);
@@ -638,6 +640,7 @@
             // label27
             // 
             this.label27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label27.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label27.Location = new System.Drawing.Point(85, 283);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(54, 17);
@@ -657,6 +660,7 @@
             // label25
             // 
             this.label25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label25.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label25.Location = new System.Drawing.Point(85, 85);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(54, 17);
@@ -676,6 +680,7 @@
             // label23
             // 
             this.label23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label23.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label23.Location = new System.Drawing.Point(85, 45);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(54, 17);
@@ -695,6 +700,7 @@
             // label21
             // 
             this.label21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label21.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label21.Location = new System.Drawing.Point(85, 232);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(54, 17);
@@ -714,6 +720,7 @@
             // label19
             // 
             this.label19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label19.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label19.Location = new System.Drawing.Point(85, 212);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(54, 17);
@@ -733,6 +740,7 @@
             // label17
             // 
             this.label17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label17.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label17.Location = new System.Drawing.Point(85, 192);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(54, 17);
@@ -752,6 +760,7 @@
             // label15
             // 
             this.label15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label15.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label15.Location = new System.Drawing.Point(85, 172);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(54, 17);
@@ -771,6 +780,7 @@
             // label13
             // 
             this.label13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label13.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label13.Location = new System.Drawing.Point(85, 152);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(54, 17);
@@ -790,6 +800,7 @@
             // label11
             // 
             this.label11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label11.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label11.Location = new System.Drawing.Point(85, 132);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(54, 17);
@@ -809,6 +820,7 @@
             // label10
             // 
             this.label10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label10.Location = new System.Drawing.Point(85, 25);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(54, 17);
@@ -829,9 +841,9 @@
             // 
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.panel2.Location = new System.Drawing.Point(146, 33);
+            this.panel2.Location = new System.Drawing.Point(146, 35);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(551, 429);
+            this.panel2.Size = new System.Drawing.Size(551, 427);
             this.panel2.TabIndex = 6;
             // 
             // FormMainWindow

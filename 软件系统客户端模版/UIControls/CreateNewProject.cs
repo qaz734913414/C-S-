@@ -43,30 +43,17 @@ namespace 软件系统客户端模版.UIControls
             };
         }
 
-        //private void comboBox5_DrawItem(object sender, DrawItemEventArgs e)
-        //{
-        //    Rectangle rec = e.Bounds;
-        //    e.Graphics.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+        private void userButton_login_Click(object sender, EventArgs e)
+        {
+            using (FormMemberSelect fms = new FormMemberSelect())
+            {
+                fms.ShowDialog();
+            }
+        }
 
-        //    if ((e.State & DrawItemState.ComboBoxEdit) == 0)
-        //    {
-        //        e.DrawBackground();
-        //    }
-        //    else
-        //    {
-        //        e.Graphics.FillRectangle(SystemBrushes.Control, rec);
-        //    }
+        private void userButton1_Click(object sender, EventArgs e)
+        {
 
-        //    if (e.Index >= 0)
-        //    {
-        //        if (comboBox5.Items[e.Index] is CommonLibrary.Account account)
-        //        {
-        //            e.Graphics.DrawString(account.姓名, Font, Brushes.Black, rec);
-        //            rec.Offset(80, 0);
-        //            e.Graphics.DrawString(account.科名, Font, Brushes.Gray, rec);
-        //        }
-        //    }
-        //    e.DrawFocusRectangle();
-        //}
+        }
     }
 }

@@ -13,7 +13,7 @@ namespace 软件系统客户端模版.UserControls
         {
             InitializeComponent();
             DrawMode = DrawMode.OwnerDrawFixed;//手动绘制所有元素
-            MaxDropDownItems = 20;
+            IntegralHeight = true;
         }
 
         protected override void OnDrawItem(DrawItemEventArgs e)
