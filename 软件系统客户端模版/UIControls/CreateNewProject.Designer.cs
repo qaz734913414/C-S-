@@ -55,6 +55,9 @@
             this.label15 = new System.Windows.Forms.Label();
             this.userButton1 = new BasicFramework.UserButton();
             this.comboBoxEx1 = new 软件系统客户端模版.UserControls.ComboBoxEx();
+            this.label14 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -217,20 +220,20 @@
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(79, 197);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(166, 23);
+            this.dateTimePicker1.Size = new System.Drawing.Size(146, 23);
             this.dateTimePicker1.TabIndex = 17;
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(354, 197);
+            this.dateTimePicker2.Location = new System.Drawing.Point(295, 197);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(166, 23);
+            this.dateTimePicker2.Size = new System.Drawing.Size(153, 23);
             this.dateTimePicker2.TabIndex = 19;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(280, 200);
+            this.label11.Location = new System.Drawing.Point(231, 200);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(68, 17);
             this.label11.TabIndex = 18;
@@ -239,11 +242,11 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(3, 229);
+            this.label12.Location = new System.Drawing.Point(5, 229);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(68, 17);
             this.label12.TabIndex = 20;
-            this.label12.Text = "项目开始：";
+            this.label12.Text = "当前节点：";
             // 
             // textBox_CurrentNode
             // 
@@ -318,11 +321,42 @@
             this.comboBoxEx1.Size = new System.Drawing.Size(185, 24);
             this.comboBoxEx1.TabIndex = 27;
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(454, 200);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(68, 17);
+            this.label14.TabIndex = 28;
+            this.label14.Text = "项目进度：";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(528, 196);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(62, 23);
+            this.textBox4.TabIndex = 29;
+            this.textBox4.Text = "0";
+            // 
+            // label16
+            // 
+            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label16.AutoSize = true;
+            this.label16.ForeColor = System.Drawing.Color.Gray;
+            this.label16.Location = new System.Drawing.Point(596, 199);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(49, 17);
+            this.label16.TabIndex = 30;
+            this.label16.Text = "(0-100)";
+            // 
             // CreateNewProject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.label14);
             this.Controls.Add(this.comboBoxEx1);
             this.Controls.Add(this.userButton1);
             this.Controls.Add(this.comboBox4);
@@ -389,5 +423,8 @@
         private System.Windows.Forms.Label label15;
         private BasicFramework.UserButton userButton1;
         private UserControls.ComboBoxEx comboBoxEx1;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label16;
     }
 }
