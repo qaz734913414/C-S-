@@ -47,13 +47,20 @@ namespace 软件系统客户端模版.UIControls
         {
             using (FormMemberSelect fms = new FormMemberSelect())
             {
-                fms.ShowDialog();
+                if (!string.IsNullOrEmpty(textBox3.Text)) fms.SetSelectedMember(CurrentSelected);
+                if (fms.ShowDialog() == DialogResult.OK)
+                {
+                    CurrentSelected = fms.GetSelectedMember();
+                    textBox3.Text = CurrentSelected.ToShowCreate();
+                }
             }
         }
 
+        private CommonLibrary.ProjectMember CurrentSelected { get; set; } = new CommonLibrary.ProjectMember();
+
         private void userButton1_Click(object sender, EventArgs e)
         {
-
+            //创建新项目
         }
     }
 }

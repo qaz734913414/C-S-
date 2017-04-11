@@ -56,9 +56,37 @@ namespace 软件系统客户端模版
             label1.Text = "总人数：" + dataGridView1.RowCount;
         }
 
+        /// <summary>
+        /// 获取已经选择的成员数据
+        /// </summary>
+        /// <returns></returns>
+        public CommonLibrary.ProjectMember GetSelectedMember()
+        {
+            CommonLibrary.ProjectMember mem = new CommonLibrary.ProjectMember();
+            for (int i = 0; i < dataGridView1.RowCount; i++)
+            {
+                mem.ItemAdd(new CommonLibrary.Member()
+                {
+                    MemberName = dataGridView1.Rows[i].Cells[0].Value.ToString(),
+                    TaskDistribution = dataGridView1.Rows[i].Cells[1].Value.ToString()
+                });
+            }
+            return mem;
+        }
+
+        public void SetSelectedMember(CommonLibrary.ProjectMember mem)
+        {
+            foreach(var m in mem)
+            {
+                int index = dataGridView1.Rows.Add();
+                dataGridView1.Rows[index].Cells[0].Value = m.MemberName;
+                dataGridView1.Rows[index].Cells[1].Value = m.TaskDistribution;
+            }
+        }
+
         private void userButton_save_Click(object sender, EventArgs e)
         {
-
+            DialogResult = DialogResult.OK;
         }
     }
 }
