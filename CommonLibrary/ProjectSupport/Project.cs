@@ -37,7 +37,7 @@ namespace CommonLibrary
         /// <returns></returns>
         public static List<Project> GetFromDatabase()
         {
-            return BasicFramework.SoftSqlOperate.ExecuteSelectEnumerable<Project>(SqlServerSupport.SqlConnectStr, SqlSelect + "WHERE[ProjectState] = 1");
+            return BasicFramework.SoftSqlOperate.ExecuteSelectEnumerable<Project>(SqlServerSupport.SqlConnectStr, SqlSelect + " WHERE ProjectState = 1");
         }
 
         /// <summary>
@@ -48,7 +48,7 @@ namespace CommonLibrary
         public static List<Project> GetDaysFinishFromDatabase(DateTime time)
         {
             return BasicFramework.SoftSqlOperate.ExecuteSelectEnumerable<Project>(SqlServerSupport.SqlConnectStr, SqlSelect +
-                "WHERE[ProjectState] = 2 AND DateFinish > '" + time + "'");
+                " WHERE DateFinish > '" + time + "' AND ProjectState = 2");
         }
 
 
@@ -213,7 +213,7 @@ namespace CommonLibrary
             DateUpdate = Convert.ToDateTime(sdr[nameof(DateUpdate)]);
             CurrentNode = sdr[nameof(CurrentNode)].ToString().Trim();
             Progress = Convert.ToInt32(sdr[nameof(Progress)]);
-            Members = JArray.Parse(sdr[nameof(Members)].ToString()).ToObject<ProjectMember>();
+            Members = new ProjectMember(JArray.Parse(sdr[nameof(Members)].ToString()).ToObject<List<Member>>());
         }
     }
 
@@ -331,6 +331,15 @@ namespace CommonLibrary
     {
         private List<Member> AllMembers { get; set; } = new List<Member>();
 
+
+        public ProjectMember()
+        {
+
+        }
+        public ProjectMember(List<Member> members)
+        {
+            AllMembers = members;
+        }
             
         public IEnumerator<Member> GetEnumerator()
         {

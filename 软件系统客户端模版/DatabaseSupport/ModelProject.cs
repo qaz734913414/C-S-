@@ -29,20 +29,20 @@ namespace 软件系统客户端模版
         public static OperateResultString UpdateProjects()
         {
             OperateResultString result = new OperateResultString();
-            try
-            {
+            //try
+            //{
                 Projects = Project.GetFromDatabase();
                 RecentlyFinishProjects = Project.GetDaysFinishFromDatabase(UserClient.DateTimeServer.AddDays(-7));
                 DepartmentAccounts = BasicFramework.SoftSqlOperate.ExecuteSelectEnumerable<Account>(
                     SqlServerSupport.SqlConnectStr, Account.SqlSelected);
                 result.IsSuccess = true;
                 return result;
-            }
-            catch(Exception ex)
-            {
-                result.Message = "数据下载失败：" + ex.Message;
-                return result;
-            }
+            //}
+            //catch(Exception ex)
+            //{
+            //    result.Message = "数据下载失败：" + ex.Message;
+            //    return result;
+            //}
         }
 
     }

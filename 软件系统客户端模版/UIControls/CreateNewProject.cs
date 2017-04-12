@@ -56,6 +56,17 @@ namespace 软件系统客户端模版.UIControls
             }
         }
 
+        /// <summary>
+        /// 清除所有的用户输入
+        /// </summary>
+        private void ClearAllInput()
+        {
+            textBox1.Text = string.Empty;
+            textBox2.Text = string.Empty;
+            textBox3.Text = string.Empty;
+            textBox4.Text = string.Empty;
+        }
+
         private CommonLibrary.ProjectMember CurrentSelected { get; set; } = new CommonLibrary.ProjectMember();
 
         private void userButton1_Click(object sender, EventArgs e)
@@ -93,22 +104,27 @@ namespace 软件系统客户端模版.UIControls
             }
 
             //创建新项目
-            CommonLibrary.Project project = new CommonLibrary.Project();
-            project.ProjectId = textBox1.Text;
-            project.PorjectName = textBox2.Text;
-            project.ProjectDepartment = ((CommonLibrary.BasicOptions)comboBox1.SelectedItem).Description;
-            project.ProjectPriority = ((CommonLibrary.BasicOptions)comboBox2.SelectedItem).IntegerCode;
-            project.ProjectCategory = ((CommonLibrary.BasicOptions)comboBox4.SelectedItem).IntegerCode;
-            project.Leader = ((CommonLibrary.Account)comboBox4.SelectedItem).姓名;
-            project.Members = CurrentSelected;
-            project.Progress = progress;
-            project.CurrentNode = textBox_CurrentNode.Text;
-
+            CommonLibrary.Project project = new CommonLibrary.Project()
+            {
+                ProjectState = 1,
+                ProjectId = textBox1.Text,
+                PorjectName = textBox2.Text,
+                ProjectDepartment = ((CommonLibrary.BasicOptions)comboBox1.SelectedItem).Description,
+                ProjectPriority = ((CommonLibrary.BasicOptions)comboBox2.SelectedItem).IntegerCode,
+                ProjectCategory = ((CommonLibrary.BasicOptions)comboBox4.SelectedItem).IntegerCode,
+                Leader = ((CommonLibrary.Account)comboBoxEx1.SelectedItem).姓名,
+                Members = CurrentSelected,
+                Progress = progress,
+                CurrentNode = textBox_CurrentNode.Text,
+                DateStart = dateTimePicker1.Value,
+                DatePlanFinish = dateTimePicker2.Value
+            };
             try
             {
-                if (project.InsertSqlDatabase()==1)
+                if (project.InsertSqlDatabase() == 1)
                 {
                     MessageBox.Show("项目新增成功！");
+                    ClearAllInput();
                 }
                 else
                 {

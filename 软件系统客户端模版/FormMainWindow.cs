@@ -478,7 +478,7 @@ namespace 软件系统客户端模版
             {
                 Project project = ModalProject.Projects[i];
 
-                if ((UserClient.DateTimeServer - project.DatePlanFinish).TotalDays < 1)
+                if ((UserClient.DateTimeServer - project.DatePlanFinish).TotalDays > 0)
                 {
                     overdeadline++;
                 }
