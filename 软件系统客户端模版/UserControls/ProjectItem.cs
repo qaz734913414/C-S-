@@ -15,5 +15,10 @@ namespace 软件系统客户端模版.UserControls
         {
             InitializeComponent();
         }
+
+        private void ProjectItem_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

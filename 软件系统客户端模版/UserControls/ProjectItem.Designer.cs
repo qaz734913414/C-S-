@@ -35,7 +35,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Name = "ProjectItem";
-            this.Size = new System.Drawing.Size(636, 81);
+            this.Size = new System.Drawing.Size(685, 108);
+            this.Load += new System.EventHandler(this.ProjectItem_Load);
             this.ResumeLayout(false);
 
         }
