@@ -175,7 +175,9 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="screenshots\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="DatabaseSupport\Help.txt" />
   </ItemGroup>
